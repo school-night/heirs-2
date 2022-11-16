@@ -38,7 +38,7 @@ const Title = (props) => {
   const { title, subtitle } = props;
 
   return (
-    <Box>
+    <Box css={{ gridColumn: "2 / span 24", gridRow: "1 / span 3" }}>
       <Text>{subtitle}</Text>
       <Box />
       <Text>{title}</Text>
@@ -49,7 +49,19 @@ const Title = (props) => {
 const Still = (props) => {
   const { slug } = props;
 
-  return <Box as="img" src={`/assets/${slug}.jpg`} />;
+  return (
+    <Box
+      css={{
+        gridColumn: "1 / span 14",
+        gridRow: "1 / span 7",
+        width: "100%",
+        height: "100%",
+        objectFit: "cover",
+      }}
+      as="img"
+      src={`/assets/${slug}.jpg`}
+    />
+  );
 };
 
 const Video = (props) => {
@@ -57,6 +69,13 @@ const Video = (props) => {
 
   return (
     <Box
+      css={{
+        gridColumn: "9 / span 16",
+        gridRow: "6 / span 5",
+        width: "100%",
+        height: "100%",
+        objectFit: "cover",
+      }}
       as="video"
       src={`/assets/${slug}.mp4`}
       poster={`/assets/${slug}_poster.jpg`}
@@ -78,7 +97,7 @@ const Page = () => {
             <Grid
               gap={5}
               gridTemplateColumns="repeat(24, 1fr)"
-              gridTemplateRows="repeat(9, 1fr)"
+              gridTemplateRows="repeat(10, 1fr)"
             >
               <Still slug={post.slug} />
               <Video slug={post.slug} />
