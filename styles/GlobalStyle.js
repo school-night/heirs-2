@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 import css from "@styled-system/css";
 
-const fontFallback = `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`;
+const fontFallback = `Helvetica Neue, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`;
 
 const global = css({
   "*": {
@@ -10,10 +10,11 @@ const global = css({
   },
   html: {
     fontFamily: fontFallback,
-    fontSize: "20px",
-    fontWeight: "300",
+    fontSize: "16px",
+    fontWeight: "500",
     backgroundColor: "background",
     color: "middle",
+    textTransform: "uppercase",
   },
   "::selection": {
     color: "middle",
@@ -36,12 +37,6 @@ const global = css({
     paddingY: 1,
     marginX: -1,
     marginY: -1,
-  },
-  [`a[href]:not(:where(
-    [href^="#"],
-    [href^="/"]:not([href^="//"]),
-  )):after`]: {
-    content: "'\\a0↗'", // non-breaking space
   },
   "h1, h2, h3, h4, h5, h6": {
     color: "foregroundDark",
@@ -66,42 +61,6 @@ const global = css({
   },
   p: {
     marginY: 4,
-  },
-  code: {
-    fontFamily: `Portfolio Monospace, Portfolio Body, ${fontFallback}`,
-    fontSize: "85%",
-    backgroundColor: "backgroundLight",
-    borderRadius: 1,
-    paddingX: 1,
-  },
-  blockquote: {
-    color: "foregroundDark",
-    borderLeft: 1,
-    paddingX: 4,
-    paddingY: 2,
-    backgroundColor: "backgroundLight",
-    fontStyle: "italic",
-  },
-  ul: {
-    marginBottom: 3,
-    listStyleType: "'· '",
-  },
-  hr: {
-    marginY: 3,
-    border: "none",
-    borderBottom: 2,
-  },
-  em: {
-    fontStyle: "italic",
-  },
-  strong: {
-    fontWeight: "600",
-  },
-  img: {
-    borderRadius: 1,
-  },
-  ".markdown-container img, .markdown-container video": {
-    width: "100%",
   },
 });
 
