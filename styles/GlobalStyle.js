@@ -19,7 +19,7 @@ const global = css({
   },
   html: {
     fontFamily: `NeueHaasGrotDisp, ${fontFallback}`,
-    fontSize: "16px",
+    fontSize: "14px",
     fontWeight: "500",
     backgroundColor: "background",
     color: "middle",
@@ -30,7 +30,7 @@ const global = css({
     backgroundColor: "backgroundLight",
   },
   body: {
-    lineHeight: "1.62", // maybe too much. consider 1.4
+    lineHeight: "1.4", // maybe too much. consider 1.4
     minHeight: "100vh",
   },
   a: {
@@ -38,15 +38,25 @@ const global = css({
     textDecoration: "none",
     transition: "padding 0.1s, margin 0.1s",
   },
-  "a:not(.work-grid-item):hover, a:not(.work-grid-item):focus-visible": {
-    outline: 0,
-    borderRadius: 1,
-    backgroundColor: "backgroundLight",
-    paddingX: 1,
-    paddingY: 1,
-    marginX: -1,
-    marginY: -1,
+  "a:hover, a:focus-visible": {
+    color: "middle",
+    // outline: 0,
+    // borderRadius: 1,
+    // backgroundColor: "backgroundLight",
+    // paddingX: 1,
+    // paddingY: 1,
+    // marginX: -1,
+    // marginY: -1,
   },
+  // "a:not(.work-grid-item):hover, a:not(.work-grid-item):focus-visible": {
+  //   outline: 0,
+  //   borderRadius: 1,
+  //   backgroundColor: "backgroundLight",
+  //   paddingX: 1,
+  //   paddingY: 1,
+  //   marginX: -1,
+  //   marginY: -1,
+  // },
   "h1, h2, h3, h4, h5, h6": {
     color: "foregroundDark",
     marginTop: 5,

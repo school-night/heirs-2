@@ -58,7 +58,7 @@ const Title = (props) => {
         lineHeight={1}
         css={{
           // textShadow: "0px 0px 10px  rgb(0 79 244)",
-          textShadow: "0 0 16px black",
+          // textShadow: "0 0 12px black",
         }}
       >
         <Text fontSize={1}>{subtitle}</Text>
@@ -78,7 +78,7 @@ const Still = (props) => {
         width: "100%",
         height: "100%",
         objectFit: "cover",
-        borderRadius: 4,
+        borderRadius: 3,
         ...(isRightAligned
           ? {
               gridColumn: "1 / span 14",
@@ -104,7 +104,7 @@ const Video = (props) => {
         width: "100%",
         height: "100%",
         objectFit: "cover",
-        borderRadius: 4,
+        borderRadius: 3,
         ...(isRightAligned
           ? {
               gridColumn: "9 / span 16",
@@ -137,12 +137,12 @@ const Page = () => {
             href={`work/${post.slug}`}
             key={post.slug}
             className="work-grid-item"
-            css={css({
-              transition: "0.2s all",
-              "&:hover": {
-                transform: ["scale(0.98)", "scale(1.06)"],
-              },
-            })}
+            // css={css({
+            //   transition: "0.2s all",
+            //   "&:hover": {
+            //     transform: ["scale(0.98)", "scale(1.04)"],
+            //   },
+            // })}
           >
             <Grid
               gap={5}

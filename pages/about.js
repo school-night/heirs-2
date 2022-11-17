@@ -19,7 +19,7 @@ const Page = () => {
     <Box>
       <Box
         css={css({
-          maxWidth: "46ch",
+          maxWidth: "47ch",
           margin: "0 auto",
           textAlign: "justify",
           color: "foreground",
@@ -30,7 +30,7 @@ const Page = () => {
         choose our heirlooms. Most of mine were detrimental, so I formed what I
         would manifest from my imagination, rather than what was laid before me.
         We will continue to tell our story through visuals, production, and
-        fashion. We&apos;d also love to tell yours.
+        fashion. We’d also love to tell yours.
         <br />
         <br />
         Love.

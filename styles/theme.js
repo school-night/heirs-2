@@ -1,6 +1,6 @@
-const fontSizes = ["1em", "1.62em", "2.62em", "4.24em", "6.86em"];
+const fontSizes = ["0.8em", "1.2em", "2.4em", "4.8em", "6em"];
 
-const space = [0, 5, 8, 13, 21, 34, 200];
+const space = [0, 4, 8, 16, 24, 36, 200];
 
 const sizes = space;
 
@@ -12,6 +12,7 @@ const colors = {
   middle: "#888",
   backgroundLight: "#333",
   background: "#000",
+  highlight: "#00f"
 };
 
 const borders = [
