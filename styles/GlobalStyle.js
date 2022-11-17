@@ -19,7 +19,7 @@ const global = css({
   },
   html: {
     fontFamily: `NeueHaasGrotDisp, ${fontFallback}`,
-    fontSize: "13px",
+    fontSize: "12px",
     fontWeight: "500",
     backgroundColor: "background",
     color: "middle",

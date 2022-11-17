@@ -1,6 +1,6 @@
-const fontSizes = ["0.8em", "1em", "2em", "4em", "6em"];
+const fontSizes = ["0.8em", "1em", "2em", "3.6em", "6em"];
 
-const space = [0, 4, 8, 16, 24, 36, 200];
+const space = [0, 4, 8, 12, 24, 60, 120];
 
 const sizes = space;
 

@@ -10,7 +10,7 @@ const Navigation = () => {
   const router = useRouter();
 
   return (
-    <Box as="nav" paddingBottom={3}>
+    <Box as="nav" paddingBottom={6}>
       <Flexbox justifyContent="space-between" gap={3} flexWrap="wrap">
         <Box as="a" href="/">
           <Box as="img" src="/assets/logo-heirs-sm.svg" height={4} />

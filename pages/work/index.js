@@ -13,8 +13,8 @@ const posts = [
   },
   {
     slug: "me-or-sum",
-    subtitle: "Nardo Wick",
-    title: "Me or Sum (feat. Future & Lil Baby)",
+    subtitle: "Nardo Wick (feat. Future & Lil Baby)",
+    title: "Me or Sum",
   },
   {
     slug: "headshots",
@@ -44,12 +44,12 @@ const Title = (props) => {
         ...(isRightAligned
           ? {
               gridColumn: "1 / span 24",
-              gridRow: "2 / span 3",
+              gridRow: "2 / span 4",
               textAlign: "right",
             }
           : {
               gridColumn: "1 / span 24",
-              gridRow: "7 / span 3",
+              gridRow: "7 / span 4",
               alignSelf: "end",
             }),
       }}
@@ -149,8 +149,9 @@ const Page = () => {
               gridTemplateColumns="repeat(24, 1fr)"
               gridTemplateRows="repeat(10, 1fr)"
             >
-              <Still slug={post.slug} isRightAligned={isRightAligned} />
               <Video slug={post.slug} isRightAligned={isRightAligned} />
+              <Still slug={post.slug} isRightAligned={isRightAligned} />
+              
               <Title
                 title={post.title}
                 subtitle={post.subtitle}

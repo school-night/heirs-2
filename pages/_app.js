@@ -17,7 +17,7 @@ const App = (props) => {
       </Head>
       <Box maxWidth="1400px" margin="0 auto" padding={3} paddingBottom={6}>
         <Navigation />
-        <Box marginBottom={6} />
+        {/* <Box marginBottom={6} /> */}
         <Box as="main">
           <Component {...pageProps} />
         </Box>

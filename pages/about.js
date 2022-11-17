@@ -38,7 +38,7 @@ const Page = () => {
         <br />
         &mdash; Morris
       </Box>
-      <Box marginBottom={6} />
+      <Box marginBottom={5} />
       <Box
         css={{
           textAlign: "center",
@@ -46,7 +46,7 @@ const Page = () => {
       >
         Collaborators
       </Box>
-      <Box marginBottom={5} />
+      <Box marginBottom={4} />
       <Box maxWidth="600px" margin="0 auto">
         <Flexbox gap={3} alignItems="center" justifyContent="center">
           {collaborators.map((collaborator) => {

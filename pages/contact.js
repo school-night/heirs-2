@@ -21,8 +21,8 @@ const Page = () => {
   return (
     <Box css={{ textAlign: "center" }}>
       <Text>Contact us</Text>
-      <Box marginBottom={5} />
-      <Flexbox flexDirection="column" gap={4} css={{ display: "inline-flex" }}>
+      <Box marginBottom={4} />
+      <Flexbox flexDirection="column" gap={3} css={{ display: "inline-flex" }}>
         {items.map((item) => {
           return (
             <Link href={item.href} key={item.href} target="_blank">
