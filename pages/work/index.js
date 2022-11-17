@@ -35,28 +35,51 @@ const posts = [
 ];
 
 const Title = (props) => {
-  const { title, subtitle } = props;
+  const { title, subtitle, isRightAligned } = props;
 
   return (
-    <Box css={{ gridColumn: "2 / span 24", gridRow: "1 / span 3" }}>
-      <Text>{subtitle}</Text>
-      <Box />
-      <Text>{title}</Text>
+    <Box
+      css={{
+        ...(isRightAligned
+          ? {
+              gridColumn: "1 / span 24",
+              gridRow: "2 / span 3",
+              textAlign: "right",
+            }
+          : {
+              gridColumn: "1 / span 24",
+              gridRow: "7 / span 3",
+              alignSelf: "end",
+            }),
+      }}
+    >
+      <Text lineHeight={1}>
+        <Text fontSize={1}>{subtitle}</Text>
+        <Box />
+        <Text fontSize={2}>{title}</Text>
+      </Text>
     </Box>
   );
 };
 
 const Still = (props) => {
-  const { slug } = props;
+  const { slug, isRightAligned } = props;
 
   return (
     <Box
       css={{
-        gridColumn: "1 / span 14",
-        gridRow: "1 / span 7",
         width: "100%",
         height: "100%",
         objectFit: "cover",
+        ...(isRightAligned
+          ? {
+              gridColumn: "1 / span 14",
+              gridRow: "1 / span 7",
+            }
+          : {
+              gridColumn: "11 / span 14",
+              gridRow: "4 / span 7",
+            }),
       }}
       as="img"
       src={`/assets/${slug}.jpg`}
@@ -65,16 +88,23 @@ const Still = (props) => {
 };
 
 const Video = (props) => {
-  const { slug } = props;
+  const { slug, isRightAligned } = props;
 
   return (
     <Box
       css={{
-        gridColumn: "9 / span 16",
-        gridRow: "6 / span 5",
         width: "100%",
         height: "100%",
         objectFit: "cover",
+        ...(isRightAligned
+          ? {
+              gridColumn: "9 / span 16",
+              gridRow: "6 / span 5",
+            }
+          : {
+              gridColumn: "1 / span 16",
+              gridRow: "1 / span 5",
+            }),
       }}
       as="video"
       src={`/assets/${slug}.mp4`}
@@ -89,9 +119,10 @@ const Video = (props) => {
 
 const Page = () => {
   return (
-    <Flexbox gap={5} flexDirection="column">
-      {posts.map((post) => {
-        // return post.slug;
+    <Flexbox gap={6} flexDirection="column">
+      {posts.map((post, index) => {
+        const isRightAligned = !(index % 2);
+
         return (
           <Link href={`work/${post.slug}`} key={post.slug}>
             <Grid
@@ -99,9 +130,13 @@ const Page = () => {
               gridTemplateColumns="repeat(24, 1fr)"
               gridTemplateRows="repeat(10, 1fr)"
             >
-              <Still slug={post.slug} />
-              <Video slug={post.slug} />
-              <Title title={post.title} subtitle={post.subtitle} />
+              <Still slug={post.slug} isRightAligned={isRightAligned} />
+              <Video slug={post.slug} isRightAligned={isRightAligned} />
+              <Title
+                title={post.title}
+                subtitle={post.subtitle}
+                isRightAligned={isRightAligned}
+              />
             </Grid>
           </Link>
         );
