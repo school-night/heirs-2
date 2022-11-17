@@ -38,7 +38,7 @@ const global = css({
     textDecoration: "none",
     transition: "padding 0.1s, margin 0.1s",
   },
-  "a:hover, a:focus-visible": {
+  "a:not(.work-grid-item):hover, a:not(.work-grid-item):focus-visible": {
     outline: 0,
     borderRadius: 1,
     backgroundColor: "backgroundLight",

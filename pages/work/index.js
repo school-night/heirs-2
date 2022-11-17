@@ -1,3 +1,4 @@
+import css from "@styled-system/css";
 import Link from "next/link";
 import Box from "../../components/Box";
 import Text from "../../components/Text";
@@ -53,7 +54,13 @@ const Title = (props) => {
             }),
       }}
     >
-      <Text lineHeight={1}>
+      <Text
+        lineHeight={1}
+        css={{
+          // textShadow: "0px 0px 10px  rgb(0 79 244)",
+          textShadow: "0 0 16px black",
+        }}
+      >
         <Text fontSize={1}>{subtitle}</Text>
         <Box />
         <Text fontSize={2}>{title}</Text>
@@ -67,10 +74,11 @@ const Still = (props) => {
 
   return (
     <Box
-      css={{
+      css={css({
         width: "100%",
         height: "100%",
         objectFit: "cover",
+        borderRadius: 4,
         ...(isRightAligned
           ? {
               gridColumn: "1 / span 14",
@@ -80,7 +88,7 @@ const Still = (props) => {
               gridColumn: "11 / span 14",
               gridRow: "4 / span 7",
             }),
-      }}
+      })}
       as="img"
       src={`/assets/${slug}.jpg`}
     />
@@ -92,10 +100,11 @@ const Video = (props) => {
 
   return (
     <Box
-      css={{
+      css={css({
         width: "100%",
         height: "100%",
         objectFit: "cover",
+        borderRadius: 4,
         ...(isRightAligned
           ? {
               gridColumn: "9 / span 16",
@@ -105,7 +114,7 @@ const Video = (props) => {
               gridColumn: "1 / span 16",
               gridRow: "1 / span 5",
             }),
-      }}
+      })}
       as="video"
       src={`/assets/${slug}.mp4`}
       poster={`/assets/${slug}_poster.jpg`}
@@ -124,7 +133,17 @@ const Page = () => {
         const isRightAligned = !(index % 2);
 
         return (
-          <Link href={`work/${post.slug}`} key={post.slug}>
+          <Link
+            href={`work/${post.slug}`}
+            key={post.slug}
+            className="work-grid-item"
+            css={css({
+              transition: "0.2s all",
+              "&:hover": {
+                transform: ["scale(0.98)", "scale(1.06)"],
+              },
+            })}
+          >
             <Grid
               gap={5}
               gridTemplateColumns="repeat(24, 1fr)"
