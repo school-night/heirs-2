@@ -49,7 +49,7 @@ const Title = (props) => {
             }
           : {
               gridColumn: "1 / span 24",
-              gridRow: "7 / span 4",
+              gridRow: "6 / span 4",
               alignSelf: "end",
             }),
       }}
