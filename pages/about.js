@@ -19,7 +19,7 @@ const Page = () => {
     <Box>
       <Box
         css={css({
-          maxWidth: "45ch",
+          maxWidth: "46ch",
           margin: "0 auto",
           textAlign: "justify",
           color: "foreground",

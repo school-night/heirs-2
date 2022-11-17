@@ -8,7 +8,7 @@ const posts = [
   {
     slug: "caddy",
     subtitle: "Benny The Butcher & J. Cole",
-    title: "Johnny P's Caddy",
+    title: "Johnny P’s Caddy",
   },
   {
     slug: "me-or-sum",

@@ -2,14 +2,23 @@ import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 import css from "@styled-system/css";
 
-const fontFallback = `Helvetica Neue, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`;
+const fonts = `
+  @font-face {
+    font-family: NeueHaasGrotDisp;
+    src: url("/fonts/NeueHaasGrotDisp-65Medium.otf") format("opentype");
+    font-weight: 500;
+    font-display: swap;
+  }
+`;
+
+const fontFallback = `NeueHaasGrotDisp, Helvetica Neue, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`;
 
 const global = css({
   "*": {
     boxSizing: "border-box",
   },
   html: {
-    fontFamily: fontFallback,
+    fontFamily: `NeueHaasGrotDisp, ${fontFallback}`,
     fontSize: "16px",
     fontWeight: "500",
     backgroundColor: "background",
@@ -66,6 +75,7 @@ const global = css({
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
+  ${fonts}
   ${global}
 `;
 
