@@ -11,11 +11,11 @@ const Navigation = () => {
 
   return (
     <Box as="nav" paddingBottom={3}>
-      <Flexbox justifyContent="space-between" gap={4} flexWrap="wrap">
+      <Flexbox justifyContent="space-between" gap={3} flexWrap="wrap">
         <Box as="a" href="/">
-          <Box as="img" src="/assets/logo-heirs-sm.svg" width="64px" />
+          <Box as="img" src="/assets/logo-heirs-sm.svg" height={4} />
         </Box>
-        <Flexbox alignItems="center" gap={4} flexWrap="wrap">
+        <Flexbox alignItems="center" gap={3} flexWrap="wrap">
           {paths.map((path) => {
             const currentPath = router.asPath;
             const currentPathParts = currentPath.split("/");

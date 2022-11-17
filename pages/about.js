@@ -48,7 +48,7 @@ const Page = () => {
       </Box>
       <Box marginBottom={5} />
       <Box maxWidth="600px" margin="0 auto">
-        <Flexbox gap={5} alignItems="center" justifyContent="center">
+        <Flexbox gap={3} alignItems="center" justifyContent="center">
           {collaborators.map((collaborator) => {
             return (
               <Link href={collaborator.href} key={collaborator.href}>
@@ -56,7 +56,7 @@ const Page = () => {
                   src={collaborator.src}
                   alt={collaborator.alt}
                   as="img"
-                  height={5}
+                  height={4}
                   loading="lazy"
                 />
               </Link>
