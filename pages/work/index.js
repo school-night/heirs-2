@@ -58,7 +58,7 @@ const Title = (props) => {
         lineHeight={1}
         css={{
           // textShadow: "0px 0px 10px  rgb(0 79 244)",
-          // textShadow: "0 0 12px black",
+          textShadow: "0 0 16px black",
         }}
       >
         <Text fontSize={1}>{subtitle}</Text>
@@ -145,7 +145,7 @@ const Page = () => {
             // })}
           >
             <Grid
-              gap={5}
+              gap={0}
               gridTemplateColumns="repeat(24, 1fr)"
               gridTemplateRows="repeat(10, 1fr)"
             >

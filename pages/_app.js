@@ -15,7 +15,7 @@ const App = (props) => {
       <Head>
         <title>HEIRS Entertainment</title>
       </Head>
-      <Box maxWidth="1400px" margin="0 auto" padding={4} paddingBottom={6}>
+      <Box maxWidth="1400px" margin="0 auto" padding={3} paddingBottom={6}>
         <Navigation />
         <Box marginBottom={6} />
         <Box as="main">
