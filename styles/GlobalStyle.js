@@ -30,7 +30,7 @@ const global = css({
     backgroundColor: "backgroundLight",
   },
   body: {
-    lineHeight: "1.4", // maybe too much. consider 1.4
+    lineHeight: "130%", // maybe too much. consider 1.4
     minHeight: "100vh",
   },
   a: {
