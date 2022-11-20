@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components";
 import Head from "next/head";
 import GlobalStyle from "../styles/GlobalStyle";
 import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 import Box from "../components/Box";
 import theme from "../styles/theme";
 
@@ -21,6 +22,7 @@ const App = (props) => {
         <Box as="main">
           <Component {...pageProps} />
         </Box>
+        <Footer />
       </Box>
     </ThemeProvider>
   );
