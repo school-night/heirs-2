@@ -90,7 +90,7 @@ const Still = (props) => {
             }),
       })}
       as="img"
-      src={`/assets/${slug}.jpg`}
+      src={`/assets/work/${slug}.jpg`}
     />
   );
 };
@@ -116,8 +116,8 @@ const Video = (props) => {
             }),
       })}
       as="video"
-      src={`/assets/${slug}.mp4`}
-      poster={`/assets/${slug}_poster.jpg`}
+      src={`/assets/work/${slug}.mp4`}
+      poster={`/assets/work/${slug}_poster.jpg`}
       loop
       muted
       autoPlay
