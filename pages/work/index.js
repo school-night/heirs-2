@@ -1,3 +1,5 @@
+import styled from "styled-components";
+import css from "@styled-system/css";
 import Link from "next/link";
 import Flexbox from "../../components/Flexbox";
 import Grid from "../../components/Grid";
@@ -5,11 +7,19 @@ import IndexTitle from "../../components/IndexTitle";
 import IndexVideo from "../../components/IndexVideo";
 import IndexStill from "../../components/IndexStill";
 
-const posts = [
+export const posts = [
   {
     slug: "caddy",
     subtitle: "Benny The Butcher & J. Cole",
     title: "Johnny P’s Caddy",
+    assets: [
+      {
+        type: "video",
+        src: "/assets/work/caddy.mp4",
+        poster: "/assets/work/caddy_poster.mp4",
+      },
+      // { type: "video", src: "/assets/work/caddy.jpg" },
+    ],
   },
   {
     slug: "me-or-sum",
@@ -39,19 +49,13 @@ const Page = () => {
   return (
     <Flexbox gap={6} flexDirection="column">
       {posts.map((post, index) => {
-        const isRightAligned = !(index % 2);
+        const isRightAligned = index % 2 === 0;
 
         return (
           <Link
             href={`work/${post.slug}`}
             key={post.slug}
             className="work-grid-item"
-            // css={css({
-            //   transition: "0.2s all",
-            //   "&:hover": {
-            //     transform: ["scale(0.98)", "scale(1.04)"],
-            //   },
-            // })}
           >
             <Grid
               gap={0}

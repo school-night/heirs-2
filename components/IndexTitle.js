@@ -1,7 +1,8 @@
 import Box from "./Box";
 import Text from "./Text";
+import Title from "./Title";
 
-const Title = (props) => {
+const IndexTitle = (props) => {
   const { title, subtitle, isRightAligned } = props;
 
   return (
@@ -20,23 +21,9 @@ const Title = (props) => {
             }),
       }}
     >
-      <Text
-        // lineHeight="120%"
-        css={{
-          // textShadow: "0px 0px 10px  rgb(0 79 244)",
-          textShadow: "0 0 16px black",
-        }}
-      >
-        {subtitle ? (
-          <>
-            <Text fontSize={1}>{subtitle}</Text>
-            <Box />
-          </>
-        ) : null}
-        <Text fontSize={2}>{title}</Text>
-      </Text>
+      <Title title={title} subtitle={subtitle} />
     </Box>
   );
 };
 
-export default Title;
+export default IndexTitle;
