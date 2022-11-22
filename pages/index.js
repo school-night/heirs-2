@@ -16,10 +16,15 @@ const Index = () => {
           height: "100%",
           display: "flex",
           aspectRatio: "16 / 9",
-        })}>
+        })}
+      >
         <iframe
-          title="vimeo-player" src="https://player.vimeo.com/video/754560721?h=6427b90bf1" width="100%" height="100%" frameborder="0">
-        </iframe >
+          title="vimeo-player"
+          src="https://player.vimeo.com/video/754560721?h=6427b90bf1"
+          width="100%"
+          height="100%"
+          frameBorder="0"
+        ></iframe>
       </Box>
     </Flexbox>
     //   <Box>

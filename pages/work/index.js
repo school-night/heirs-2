@@ -1,9 +1,9 @@
-import css from "@styled-system/css";
 import Link from "next/link";
-import Box from "../../components/Box";
-import Text from "../../components/Text";
 import Flexbox from "../../components/Flexbox";
 import Grid from "../../components/Grid";
+import Title from "../../components/Title";
+import Video from "../../components/Video";
+import Still from "../../components/Still";
 
 const posts = [
   {
@@ -35,97 +35,6 @@ const posts = [
   { slug: "southside-mez", subtitle: "Mez", title: "Southside Mez" },
 ];
 
-const Title = (props) => {
-  const { title, subtitle, isRightAligned } = props;
-
-  return (
-    <Box
-      css={{
-        ...(isRightAligned
-          ? {
-              gridColumn: "1 / span 24",
-              gridRow: "2 / span 4",
-              textAlign: "right",
-            }
-          : {
-              gridColumn: "1 / span 24",
-              gridRow: "6 / span 4",
-              alignSelf: "end",
-            }),
-      }}
-    >
-      <Text
-        // lineHeight="120%"
-        css={{
-          // textShadow: "0px 0px 10px  rgb(0 79 244)",
-          textShadow: "0 0 16px black",
-        }}
-      >
-        <Text fontSize={1}>{subtitle}</Text>
-        <Box />
-        <Text fontSize={2}>{title}</Text>
-      </Text>
-    </Box>
-  );
-};
-
-const Still = (props) => {
-  const { slug, isRightAligned } = props;
-
-  return (
-    <Box
-      css={css({
-        width: "100%",
-        height: "100%",
-        objectFit: "cover",
-        borderRadius: 3,
-        ...(isRightAligned
-          ? {
-              gridColumn: "1 / span 14",
-              gridRow: "1 / span 7",
-            }
-          : {
-              gridColumn: "11 / span 14",
-              gridRow: "4 / span 7",
-            }),
-      })}
-      as="img"
-      src={`/assets/work/${slug}.jpg`}
-    />
-  );
-};
-
-const Video = (props) => {
-  const { slug, isRightAligned } = props;
-
-  return (
-    <Box
-      css={css({
-        width: "100%",
-        height: "100%",
-        objectFit: "cover",
-        borderRadius: 3,
-        ...(isRightAligned
-          ? {
-              gridColumn: "9 / span 16",
-              gridRow: "6 / span 5",
-            }
-          : {
-              gridColumn: "1 / span 16",
-              gridRow: "1 / span 5",
-            }),
-      })}
-      as="video"
-      src={`/assets/work/${slug}.mp4`}
-      poster={`/assets/work/${slug}_poster.jpg`}
-      loop
-      muted
-      autoPlay
-      playsInline
-    />
-  );
-};
-
 const Page = () => {
   return (
     <Flexbox gap={6} flexDirection="column">
@@ -149,9 +58,15 @@ const Page = () => {
               gridTemplateColumns="repeat(24, 1fr)"
               gridTemplateRows="repeat(10, 1fr)"
             >
-              <Video slug={post.slug} isRightAligned={isRightAligned} />
-              <Still slug={post.slug} isRightAligned={isRightAligned} />
-              
+              <Video
+                src={`/assets/work/${post.slug}.mp4`}
+                poster={`/assets/work/${post.slug}_poster.jpg`}
+                isRightAligned={isRightAligned}
+              />
+              <Still
+                src={`/assets/work/${post.slug}.jpg`}
+                isRightAligned={isRightAligned}
+              />
               <Title
                 title={post.title}
                 subtitle={post.subtitle}

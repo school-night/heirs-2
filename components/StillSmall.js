@@ -1,8 +1,8 @@
 import css from "@styled-system/css";
 import Box from "./Box";
 
-const Video = (props) => {
-  const { src, poster, isRightAligned } = props;
+const StillSmall = (props) => {
+  const { src, isRightAligned } = props;
 
   return (
     <Box
@@ -21,24 +21,10 @@ const Video = (props) => {
               gridRow: "1 / span 5",
             }),
       })}
-      as="video"
+      as="img"
       src={src}
-      poster={poster}
-      loop
-      muted
-      autoPlay
-      playsInline
     />
   );
 };
 
-export default Video;
-
-// const Video = (props) => {
-//   return (
-//     <video loop muted autoPlay playsInline>
-//       <source src={props.source} type="video/mp4" />
-//       Your browser does not support the video tag.
-//     </video>
-//   );
-// };
+export default StillSmall;

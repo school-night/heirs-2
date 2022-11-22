@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useRouter } from "next/router";
 import { ThemeProvider } from "styled-components";
 import Head from "next/head";
 import GlobalStyle from "../styles/GlobalStyle";
@@ -9,6 +10,8 @@ import theme from "../styles/theme";
 
 const App = (props) => {
   const { Component, pageProps } = props;
+  const router = useRouter();
+  const currentPath = router.asPath;
 
   return (
     <ThemeProvider theme={theme}>
@@ -22,7 +25,7 @@ const App = (props) => {
         <Box as="main">
           <Component {...pageProps} />
         </Box>
-        <Footer />
+        {currentPath === "/" ? null : <Footer />}
       </Box>
     </ThemeProvider>
   );
