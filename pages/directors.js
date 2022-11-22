@@ -1,8 +1,8 @@
 import Flexbox from "../components/Flexbox";
 import Grid from "../components/Grid";
-import Still from "../components/Still";
-import StillSmall from "../components/StillSmall";
-import Title from "../components/Title";
+import IndexStill from "../components/IndexStill";
+import IndexStillSmall from "../components/IndexStillSmall";
+import IndexTitle from "../components/IndexTitle";
 
 const posts = [
   { slug: "kasey-elise-walker", title: "Kasey Elise Walker" },
@@ -25,15 +25,15 @@ const Page = () => {
             gridTemplateColumns="repeat(24, 1fr)"
             gridTemplateRows="repeat(10, 1fr)"
           >
-            <StillSmall
+            <IndexStillSmall
               src={`/assets/directors/${post.slug}_1.jpg`}
               isRightAligned={isRightAligned}
             />
-            <Still
+            <IndexStill
               src={`/assets/directors/${post.slug}_2.jpg`}
               isRightAligned={isRightAligned}
             />
-            <Title title={post.title} isRightAligned={isRightAligned} />
+            <IndexTitle title={post.title} isRightAligned={isRightAligned} />
           </Grid>
         );
       })}

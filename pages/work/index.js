@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Flexbox from "../../components/Flexbox";
 import Grid from "../../components/Grid";
-import Title from "../../components/Title";
-import Video from "../../components/Video";
-import Still from "../../components/Still";
+import IndexTitle from "../../components/IndexTitle";
+import IndexVideo from "../../components/IndexVideo";
+import IndexStill from "../../components/IndexStill";
 
 const posts = [
   {
@@ -58,16 +58,16 @@ const Page = () => {
               gridTemplateColumns="repeat(24, 1fr)"
               gridTemplateRows="repeat(10, 1fr)"
             >
-              <Video
+              <IndexVideo
                 src={`/assets/work/${post.slug}.mp4`}
                 poster={`/assets/work/${post.slug}_poster.jpg`}
                 isRightAligned={isRightAligned}
               />
-              <Still
+              <IndexStill
                 src={`/assets/work/${post.slug}.jpg`}
                 isRightAligned={isRightAligned}
               />
-              <Title
+              <IndexTitle
                 title={post.title}
                 subtitle={post.subtitle}
                 isRightAligned={isRightAligned}
