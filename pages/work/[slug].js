@@ -1,6 +1,4 @@
-import css from "@styled-system/css";
 import Box from "../../components/Box";
-import Text from "../../components/Text";
 import Title from "../../components/Title";
 import { posts } from "./index";
 
