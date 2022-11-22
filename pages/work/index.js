@@ -10,37 +10,106 @@ export const posts = [
     slug: "caddy",
     subtitle: "Benny The Butcher & J. Cole",
     title: "Johnny P’s Caddy",
-    assets: [
-      {
-        type: "video",
-        src: "/assets/work/caddy.mp4",
-        poster: "/assets/work/caddy_poster.mp4",
-      },
-      // { type: "video", src: "/assets/work/caddy.jpg" },
-    ],
+    description: "",
+    embed: null,
+    images: [],
   },
   {
     slug: "me-or-sum",
     subtitle: "Nardo Wick (feat. Future & Lil Baby)",
     title: "Me or Sum",
+    description: "",
+    embed: null,
+    images: [],
   },
   {
     slug: "headshots",
     subtitle: "Isaiah Rashad",
     title: "Headshots (4r Da Locals)",
+    description: "",
+    embed: null,
+    images: [],
   },
-  { slug: "amari", subtitle: "J. Cole", title: "a m a r i" },
-  { slug: "air-max", subtitle: "Nike", title: "Nike Air Max Day 2021" },
+  {
+    slug: "amari",
+    subtitle: "J. Cole",
+    title: "a m a r i",
+    description: "",
+    embed: null,
+    images: [],
+  },
+  {
+    slug: "air-max",
+    subtitle: "Nike",
+    title: "Nike Air Max Day 2021",
+    description: "",
+    embed: null,
+    images: [],
+  },
   {
     slug: "rs-dreamer-2",
     subtitle: "PUMA & J. Cole",
     title: "PUMA RS Dreamer 2",
+    description:
+      "Photography, Videography, and Creation Direction by Mez for HEIRS Entertainment\nProduced by HEIRS Entertainment and AJR Films",
+    embed: (
+      <iframe
+        class="embed-responsive-item"
+        src="https://www.youtube.com/embed/mMZIPXw4Khc?rel=0&modestbranding=1"
+        allowfullscreen
+      ></iframe>
+    ),
+    images: [
+      "/assets/work/rs-dreamer-2_6.jpg",
+      "/assets/work/rs-dreamer-2_7.jpg",
+      "/assets/work/rs-dreamer-2_8.jpg",
+      "/assets/work/rs-dreamer-2_1.jpg",
+      "/assets/work/rs-dreamer-2_2.jpg",
+      "/assets/work/rs-dreamer-2_3.jpg",
+      "/assets/work/rs-dreamer-2_4.jpg",
+      "/assets/work/rs-dreamer-2_5.jpg",
+    ],
   },
-  { slug: "middle-child", subtitle: "J. Cole", title: "Middle Child" },
-  { slug: "mood", subtitle: "SiR", title: "Mood" },
-  { slug: "loading", subtitle: "Mez", title: "Loading" },
-  { slug: "rs-dreamer", subtitle: "PUMA & J. Cole", title: "PUMA RS Dreamer" },
-  { slug: "southside-mez", subtitle: "Mez", title: "Southside Mez" },
+  {
+    slug: "middle-child",
+    subtitle: "J. Cole",
+    title: "Middle Child",
+    description: "",
+    embed: null,
+    images: [],
+  },
+  {
+    slug: "mood",
+    subtitle: "SiR",
+    title: "Mood",
+    description: "",
+    embed: null,
+    images: [],
+  },
+  {
+    slug: "loading",
+    subtitle: "Mez",
+    title: "Loading",
+    description: "",
+    embed: null,
+    images: [],
+  },
+  {
+    slug: "rs-dreamer",
+    subtitle: "PUMA & J. Cole",
+    title: "PUMA RS Dreamer",
+    description: "",
+    embed: null,
+    images: [],
+  },
+  {
+    slug: "southside-mez",
+    subtitle: "Mez",
+    title: "Southside Mez",
+    description: "",
+    embed: null,
+    images: [],
+  },
 ];
 
 const Page = () => {

@@ -23,7 +23,7 @@ const Navigation = () => {
             const href =
               path === "/shop"
                 ? "https://heirs-entertainment.myshopify.com/"
-                : pathname;
+                : path;
 
             const isCurrentPath = currentPath === path;
             const isNestedPath = currentPathParts[1] === pathname;

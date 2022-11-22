@@ -1,15 +1,17 @@
+import css from "@styled-system/css";
 import Box from "./Box";
 import Text from "./Text";
 
 const Title = (props) => {
-  const { title, subtitle } = props;
+  const { title, subtitle, color } = props;
 
   return (
     <Text
-      css={{
+      css={css({
         textShadow: "0 0 16px black",
         lineHeight: "0.8",
-      }}
+        color: color ? color : null,
+      })}
     >
       {subtitle ? (
         <>

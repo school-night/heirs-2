@@ -1,5 +1,8 @@
+import css from "@styled-system/css";
+import Link from "next/link";
 import Box from "../../components/Box";
 import Title from "../../components/Title";
+import Flexbox from "../../components/Flexbox";
 import { posts } from "./index";
 
 const PostPage = (props) => {
@@ -7,26 +10,48 @@ const PostPage = (props) => {
 
   const post = posts.find((p) => p.slug === slug);
 
+  //   description
+  // embed
+  // images
   return (
     <Box>
-      <Title title={post.title} subtitle={post.subtitle} />
+      <Title color="foreground" title={post.title} subtitle={post.subtitle} />
+      <Box marginBottom={3} />
+      <Box css={{ whiteSpace: "pre-line" }}>{post.description}</Box>
       <Box marginBottom={6} />
-      {/* {post.assets.map((asset) => {
-        const { type, src, poster = "" } = asset;
-        return (
+      <Flexbox flexDirection="column" gap={4}>
+        {post.embed ? (
           <Box
             css={css({
               width: "100%",
               height: "100%",
-              objectFit: "cover",
-              borderRadius: 3,
+              display: "flex",
+              aspectRatio: "16 / 9",
+              "& iframe": {
+                width: "100%",
+              },
             })}
-            as={type}
-            src={src} // poster={poster}
-            controls={type === "video"}
-          />
-        );
-      })} */}
+          >
+            {post.embed}
+          </Box>
+        ) : null}
+        {post.images.map((src) => {
+          return (
+            <Box
+              key={src}
+              css={css({
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              })}
+              as="img"
+              src={src}
+            />
+          );
+        })}
+      </Flexbox>
+      <Box marginBottom={6} />
+      <Link href="/work">← Back to all projects</Link>
     </Box>
   );
 };
@@ -37,6 +62,7 @@ export async function getStaticPaths() {
     return { params: { slug } };
   });
 
+  console.log(paths);
   return {
     paths,
     fallback: false,
@@ -45,8 +71,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(props) {
   const { slug } = props.params;
-  // console.log(post);
-
   return {
     props: {
       slug,

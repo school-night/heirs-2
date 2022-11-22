@@ -2,7 +2,7 @@ import Box from "./Box";
 import Title from "./Title";
 
 const IndexTitle = (props) => {
-  const { title, subtitle, isRightAligned } = props;
+  const { title, subtitle, isRightAligned, color } = props;
 
   return (
     <Box
@@ -20,7 +20,7 @@ const IndexTitle = (props) => {
             }),
       }}
     >
-      <Title title={title} subtitle={subtitle} />
+      <Title title={title} subtitle={subtitle} color={color} />
     </Box>
   );
 };
