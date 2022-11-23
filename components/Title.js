@@ -3,14 +3,14 @@ import Box from "./Box";
 import Text from "./Text";
 
 const Title = (props) => {
-  const { title, subtitle, color } = props;
+  const { title, subtitle } = props;
 
   return (
     <Text
       css={css({
         textShadow: "0 4px 12px rgba(0,0,0,.4)",
         lineHeight: "0.8",
-        color: color ? color : null,
+        color: "foreground",
       })}
     >
       {subtitle ? (

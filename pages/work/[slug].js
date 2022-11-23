@@ -15,7 +15,7 @@ const PostPage = (props) => {
   // images
   return (
     <Box>
-      <Title color="foreground" title={post.title} subtitle={post.subtitle} />
+      <Title title={post.title} subtitle={post.subtitle} />
       <Box marginBottom={3} />
       <Box css={{ whiteSpace: "pre-line" }}>{post.description}</Box>
       <Box marginBottom={6} />
