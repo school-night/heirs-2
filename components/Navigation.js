@@ -4,7 +4,7 @@ import Box from "../components/Box";
 import Text from "../components/Text";
 import Flexbox from "../components/Flexbox";
 
-const paths = ["/work", "/about", "/contact", "/directors", "/shop"];
+const paths = ["/work", "/directors", "/about", "/contact", "/shop"];
 
 const Navigation = () => {
   const router = useRouter();
