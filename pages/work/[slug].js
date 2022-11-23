@@ -3,7 +3,7 @@ import Link from "next/link";
 import Box from "../../components/Box";
 import Title from "../../components/Title";
 import Flexbox from "../../components/Flexbox";
-import { posts } from "./index";
+import posts from "./posts";
 
 const PostPage = (props) => {
   const { slug } = props;
