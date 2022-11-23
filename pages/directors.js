@@ -29,15 +29,15 @@ const Page = () => {
               "& img": {
                 transition: "all 0.2s",
               },
-              "&:not(:hover) img:nth-child(2)": {
-                transform: isRightAligned
-                  ? [, "translateX(50px) translateY(50px)"]
-                  : [, "translateX(-50px) translateY(-50px)"],
-              },
               "&:not(:hover) img:nth-child(1)": {
                 transform: isRightAligned
-                  ? [, "translateX(-50px) translateY(-50px)"]
-                  : [, "translateX(50px) translateY(50px)"],
+                  ? [null, "translateX(-50px) translateY(-50px)"]
+                  : [null, "translateX(50px) translateY(50px)"],
+              },
+              "&:not(:hover) img:nth-child(2)": {
+                transform: isRightAligned
+                  ? [null, "translateX(50px) translateY(50px)"]
+                  : [null, "translateX(-50px) translateY(-50px)"],
               },
             })}
           >

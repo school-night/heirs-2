@@ -27,15 +27,15 @@ const Page = () => {
                 "& img, & video": {
                   transition: "all 0.2s",
                 },
-                "&:not(:hover) img": {
-                  transform: isRightAligned
-                    ? [, "translateX(50px) translateY(50px)"]
-                    : [, "translateX(-50px) translateY(-50px)"],
-                },
                 "&:not(:hover) video": {
                   transform: isRightAligned
-                    ? [, "translateX(-50px) translateY(-50px)"]
-                    : [, "translateX(50px) translateY(50px)"],
+                    ? [null, "translateX(-50px) translateY(-50px)"]
+                    : [null, "translateX(50px) translateY(50px)"],
+                },
+                "&:not(:hover) img": {
+                  transform: isRightAligned
+                    ? [null, "translateX(50px) translateY(50px)"]
+                    : [null, "translateX(-50px) translateY(-50px)"],
                 },
               })}
             >
