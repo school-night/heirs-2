@@ -24,13 +24,14 @@ const Navigation = () => {
               path === "/shop"
                 ? "https://heirs-entertainment.myshopify.com/"
                 : path;
+            const target = path === "/shop" ? "_blank" : null;
 
             const isCurrentPath = currentPath === path;
             const isNestedPath = currentPathParts[1] === pathname;
             const isCurrent = isCurrentPath || isNestedPath;
 
             return (
-              <Link href={href} key={path}>
+              <Link href={href} key={path} target={target}>
                 <Text color={isCurrent ? "middle" : null}>{pathname}</Text>
               </Link>
             );
