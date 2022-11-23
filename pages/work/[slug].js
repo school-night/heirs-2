@@ -10,7 +10,7 @@ const PostPage = (props) => {
 
   const post = posts.find((p) => p.slug === slug);
 
-  //   description
+  // description
   // embed
   // images
   return (
@@ -19,7 +19,7 @@ const PostPage = (props) => {
       <Box marginBottom={3} />
       <Box css={{ whiteSpace: "pre-line" }}>{post.description}</Box>
       <Box marginBottom={6} />
-      <Flexbox flexDirection="column" gap={4}>
+      <Flexbox flexDirection="column" gap={6}>
         {post.embed ? (
           <Box
             css={css({
