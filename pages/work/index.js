@@ -5,7 +5,7 @@ import Grid from "../../components/Grid";
 import IndexTitle from "../../components/IndexTitle";
 import IndexVideo from "../../components/IndexVideo";
 import IndexStill from "../../components/IndexStill";
-import posts from "./posts";
+import posts from "../../public/posts";
 
 const Page = () => {
   return (

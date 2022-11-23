@@ -3,7 +3,7 @@ import Link from "next/link";
 import Box from "../../components/Box";
 import Title from "../../components/Title";
 import Flexbox from "../../components/Flexbox";
-import posts from "./posts";
+import posts from "../../public/posts";
 
 const PostPage = (props) => {
   const { slug } = props;
@@ -62,7 +62,6 @@ export async function getStaticPaths() {
     return { params: { slug } };
   });
 
-  console.log(paths);
   return {
     paths,
     fallback: false,
