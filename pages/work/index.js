@@ -1,3 +1,4 @@
+import css from "@styled-system/css";
 import Link from "next/link";
 import Flexbox from "../../components/Flexbox";
 import Grid from "../../components/Grid";
@@ -22,6 +23,21 @@ const Page = () => {
               gap={0}
               gridTemplateColumns="repeat(24, 1fr)"
               gridTemplateRows="repeat(10, 1fr)"
+              css={css({
+                "& img, & video": {
+                  transition: "all 0.2s",
+                },
+                "&:not(:hover) img": {
+                  transform: isRightAligned
+                    ? [, "translateX(50px) translateY(50px)"]
+                    : [, "translateX(-50px) translateY(-50px)"],
+                },
+                "&:not(:hover) video": {
+                  transform: isRightAligned
+                    ? [, "translateX(-50px) translateY(-50px)"]
+                    : [, "translateX(50px) translateY(50px)"],
+                },
+              })}
             >
               <IndexVideo
                 src={`/assets/work/${post.slug}.mp4`}

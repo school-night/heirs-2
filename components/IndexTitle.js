@@ -7,6 +7,7 @@ const IndexTitle = (props) => {
   return (
     <Box
       css={{
+        position: "relative",
         ...(isRightAligned
           ? {
               gridColumn: "1 / span 24",
