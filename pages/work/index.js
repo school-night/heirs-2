@@ -114,7 +114,7 @@ export const posts = [
 
 const Page = () => {
   return (
-    <Flexbox gap={6} flexDirection="column">
+    <Flexbox gap={7} flexDirection="column">
       {posts.map((post, index) => {
         const isRightAligned = index % 2 === 0;
 

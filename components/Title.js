@@ -8,7 +8,7 @@ const Title = (props) => {
   return (
     <Text
       css={css({
-        textShadow: "0 0 16px black",
+        textShadow: "0 4px 12px rgba(0,0,0,.4)",
         lineHeight: "0.8",
         color: color ? color : null,
       })}
