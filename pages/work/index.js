@@ -39,13 +39,13 @@ const Page = () => {
                 },
               })}
             >
+              <IndexStill
+                src={`/assets/work/${post.slug}.jpg`}
+                isRightAligned={isRightAligned}
+              />
               <IndexVideo
                 src={`/assets/work/${post.slug}.mp4`}
                 poster={`/assets/work/${post.slug}_poster.jpg`}
-                isRightAligned={isRightAligned}
-              />
-              <IndexStill
-                src={`/assets/work/${post.slug}.jpg`}
                 isRightAligned={isRightAligned}
               />
               <IndexTitle
