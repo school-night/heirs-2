@@ -23,6 +23,7 @@ const StillSmall = (props) => {
       })}
       as="img"
       src={src}
+      loading="lazy"
     />
   );
 };
